@@ -213,3 +213,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 EXTENDED_POST_PROCESS_PROPS := vendor/slim/tools/slim_process_props.py
 
+$(call prepend-product-if-exists, vendor/extra/product.mk)
+
+# Inherite sabermod vendor
+SM_VENDOR := vendor/sm
+include $(SM_VENDOR)/Main.mk
